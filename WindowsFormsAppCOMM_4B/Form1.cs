@@ -70,18 +70,25 @@ namespace WindowsFormsAppCOMM_4B
         private void button1_Click(object sender, EventArgs e)
         {
             serialPort1.WriteLine("1");
-            label_VOLTAGE.Text = "0.02";
+            string leo_linea_de_comm = serialPort1.ReadLine();
+            double texto = Convert.ToDouble(leo_linea_de_comm);
+            label_LCD_text.Text = texto.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             serialPort1.WriteLine("2");
-            label_VOLTAGE.Text = "0.02";
+            string leo_linea_de_comm = serialPort1.ReadLine();
+            double texto = Convert.ToDouble(leo_linea_de_comm);
+            label_LCD_text.Text = texto.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             serialPort1.WriteLine("3");
+            string leo_linea_de_comm = serialPort1.ReadLine();
+            double texto = Convert.ToDouble(leo_linea_de_comm);
+            label_LCD_text.Text = texto.ToString();
         }
 
         private void port_select_label_Click(object sender, EventArgs e)
